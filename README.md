@@ -1,4 +1,4 @@
-# 5.PasswordGenerator
+# PasswordGenerator
 # Generador de contraseñas aleatorias
 Este es un generador de contraseñas aleatorias simple que permite al usuario especificar la longitud y la complejidad de la contraseña que desea generar. La aplicación utiliza JavaScript para generar contraseñas aleatorias y mostrarlas en la página.
 
