@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css"
+    />
+    <link rel="shortcut icon" href="padlock.png" type="image/x-icon" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-md shadow-md">
+      <h1 class="text-2xl font-bold mb-4 text-center">Password Generator</h1>
+      <form id="password-form">
+        <div class="mb-4">
+          <label for="length" class="block text-gray-700 font-semibold mb-2"
+            >Password length:</label
+          >
+          <input
+            type="number"
+            id="length"
+            name="length"
+            min="4"
+            max="30"
+            value="8"
+            class="w-full border-gray-400 border-2 rounded-md p-2"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2"
+            >Characters to include:</label
+          >
+          <div class="flex items-center mb-2">
+            <input
+              type="checkbox"
+              id="uppercase"
+              name="uppercase"
+              class="mr-2"
+            />
+            <label for="uppercase" class="text-gray-700 font-medium"
+              >Uppercase letters</label
+            >
+          </div>
+          <div class="flex items-center mb-2">
+            <input
+              type="checkbox"
+              id="lowercase"
+              name="lowercase"
+              class="mr-2"
+            />
+            <label for="lowercase" class="text-gray-700 font-medium"
+              >Lowercase letters</label
+            >
+          </div>
+          <div class="flex items-center mb-2">
+            <input type="checkbox" id="numbers" name="numbers" class="mr-2" />
+            <label for="numbers" class="text-gray-700 font-medium"
+              >Numbers</label
+            >
+          </div>
+          <div class="flex items-center mb-2">
+            <input type="checkbox" id="symbols" name="symbols" class="mr-2" />
+            <label for="symbols" class="text-gray-700 font-medium"
+              >Symbols</label
+            >
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="password" class="block text-gray-700 font-semibold mb-2"
+            >Generated password</label
+          >
+          <input
+            type="text"
+            id="password"
+            name="password"
+            class="w-full border-gray-400 border-2 rounded-md p-2"
+            readonly
+          />
+        </div>
+        <div class="text-center">
+          <button
+            type="button"
+            id="generate"
+            class="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-600"
+          >
+            Generate password
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
